@@ -54,6 +54,12 @@ export const createNewPokemon = (payload) => async dispatch => {
     },
     body: JSON.stringify(payload)
   });
+
+  if (response.ok) {
+    const newPokemon = await response.json();
+    dispatch(addOnePokemon(newPokemon));
+    return newPokemon;
+  }
 };
 
 export const editPokemon = (payload) => async dispatch => {

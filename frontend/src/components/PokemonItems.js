@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getItems } from "../store/items";
+import { getItems, deleteItem } from "../store/items";
 
 const PokemonItems = ({ pokemon, setEditItemId }) => {
   const dispatch = useDispatch();
